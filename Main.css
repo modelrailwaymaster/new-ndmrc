@@ -1,0 +1,309 @@
+/* vars */
+:root{
+    --Marron: #6a1800;
+    --Grey: #232323;
+    --LightGrey: #B3B3B3;
+    --Yellow: #ddaf4d;
+    --fontSizeLarge: 40px;
+    --fontSizeMedium: 30px;
+    --fontSizeSmall: 20px;
+    --fontSizeSuperSmall: 15px;
+    --buttonSize: 20px;
+    --logoPadding: 15px;
+    --buttonWidth: 150px;
+}
+
+/* change font size*/
+@media (max-width: 800px) {
+    :root{
+        --fontSizeLarge: 30px !important;
+        --fontSizeMedium: 20px !important;
+        --fontSizeSmall: 20px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    :root{
+        --fontSizeLarge: 20px !important;
+        --fontSizeMedium: 15px !important;
+        --fontSizeSmall: 15px !important;
+    }
+}
+
+/* general formatting*/
+html{scroll-behavior: smooth;}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+}
+
+body{
+    width: 100%;
+    line-height: 1.5;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.show{
+    display: block !important;
+}
+
+.tall{
+    height: 620px;
+}
+
+a{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+a > img{
+    width: 30px;
+    vertical-align: middle;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--Yellow);
+}
+
+
+/* head */
+.head{
+    background-color: var(--Marron);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.name{
+    width: 90%;
+    color: white;
+    font-weight: bold;
+    font-size: var(--fontSizeLarge);
+    top: 0;
+    background-color: transparent;
+}
+
+@media (max-width : 1000px)
+{
+    .name{font-size:var(--fontSizeMedium) !important;}
+}
+
+@media (max-width : 800px)
+{
+    .name{font-size:var(--fontSizeSmall) !important;}
+}
+
+.button_container_large{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: transparent;
+}
+
+.button_container_small{
+    display: none;
+    height: 75px;
+}
+
+.button_container > *{
+    text-align: center;
+    color: white;
+}
+
+.button{
+    font-size: var(--buttonSize);
+    width: var(--buttonWidth);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button:hover {
+    border-color: var(--Yellow);
+}
+
+@media (max-width: 800px) {
+    .button_container_large {
+      display: none !important;
+    }
+    .button_container_small{
+        display: block !important;
+    }
+  }
+
+.dropdown_arrow{
+    height: 30px;
+    padding-left: 3px;
+    padding-bottom: 1px;
+}
+
+.logo_header{
+    height: 90%;
+}
+
+.logo{
+    object-fit: cover;
+    height: 100%;
+    padding-left: var(--logoPadding);
+    padding-right: var(--logoPadding);
+}
+
+.menu_button{
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    float: left;
+}
+
+.dropdown_layouts{
+    background-color: var(--Marron);
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 10px!important;
+    transform: translateX(calc(-50% - 255px));
+    width: fit-content;
+    display: none;
+    position: absolute; 
+    top: 115px
+
+}
+
+@media (max-width : 1175px) and (min-width:1000px)
+{
+    .dropdown_layouts{
+        transform: none !important;
+        left: 15%;
+    }
+    
+}
+
+@media (max-width : 1000px)
+{
+    .dropdown_layouts{
+        transform: none !important;
+        left: 12%;
+    }
+    
+}
+
+.dropdown_layouts:hover{
+    display: block;
+}
+
+.layout_button{
+    display: block;
+    font-size: var(--buttonSize);
+    width: var(--buttonWidth);
+    border: 1px solid white;
+    background-color: var(--Marron);
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.layout_button:hover {
+    border-color: var(--Yellow) !important;
+}
+
+.dropdown_menu{
+    display: none;
+    width: 100%;
+    background-color: var(--Marron);
+    height: 250px;
+}
+
+#layouts_menu:hover ~ .dropdown_layouts{
+    display: block;
+}
+
+.small_button{
+    display: block;
+    font-size: var(--buttonSize);
+    width: var(--buttonWidth);
+    border: 1px solid white;
+    background-color: var(--Marron);
+    width: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.small_button:hover {
+    border-color: var(--Yellow) !important;
+}
+
+.logo_small{
+    object-fit: cover;
+    height: 100%;
+    margin-left: 35% !important;
+}
+
+.logo_small:hover{
+    cursor: pointer;
+    border-color: var(--Yellow);
+}
+
+.dropdown_layouts_small{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: none;
+}
+
+
+.layout_button_small{
+    display: block;
+    font-size: var(--fontSizeSuperSmall);
+    width: var(--buttonWidth);
+    border: 1px solid white;
+    background-color: var(--Marron);
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.layout_button_small:hover {
+    border-color: var(--Yellow) !important;
+}
+
+/* footer */
+.footer{
+    margin-top: 20px;
+    background-color: var(--Marron);
+    font-size: var(--fontSizeSmall);
+    padding: 20px;
+    color: white;
+}
+
+/* privacy */
+.privacyContainer{
+    margin-top: 150px !important;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid var(--Marron);
+    border-radius: 10px;
+}

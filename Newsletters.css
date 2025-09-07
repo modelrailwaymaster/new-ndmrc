@@ -1,0 +1,31 @@
+.newsletter_container{
+    width: 97%;
+    margin-top: 150px !important;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.year{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--Marron);
+    border-radius: 10px;
+    background-color: var(--LightGrey);
+}
+
+.year_title{
+    font-size: var(--fontSizeMedium);
+    color: var(--Marron);
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+
+.year_newsletters > a{
+    font-size: var(--fontSizeSuperSmall);
+    color: var(--Marron) !important;
+    font-weight: bold;
+}
