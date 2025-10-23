@@ -76,6 +76,11 @@ input:focus{
 
 
 /* head */
+
+.home_image > img {
+    width: auto !important;
+}
+
 .head{
     background-color: var(--Marron);
     position: fixed;
@@ -150,7 +155,7 @@ input:focus{
   }
 
 .dropdown_arrow{
-    height: 30px;
+    height: 25px;
     padding-left: 3px;
     padding-bottom: 1px;
 }
