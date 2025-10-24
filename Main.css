@@ -312,3 +312,9 @@ input:focus{
     border: 2px solid var(--Marron);
     border-radius: 10px;
 }
+
+/* Video */
+.video-container iframe {
+  width: 100%;
+  height: auto;
+}
