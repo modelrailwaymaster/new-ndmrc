@@ -79,10 +79,34 @@
     grid-column: span 2;
 }
 
-@media (max-width: 1000px) {
-    .exhibition_grid {
+@media (max-width: 800px) {
+    .exhibition_info {
       grid-template-columns: auto !important;
     }
+
+    .exhibition_highlight{
+        grid-column: span 1 !important;
+    }
+
+    .exhibition_facts{
+        margin-bottom: 10px !important;
+    }
+
+    .exhibition_facts_list{
+        text-align: center !important;
+    }
+
+    .exhibition_facts_list > img {
+        max-width: 200px !important;
+    }
+    .exhibition_attendees{
+        grid-template-columns: auto !important;
+    }
+
+    .exhibition_highlight_layouts{
+        grid-template-columns: auto !important;
+    }
+
   }
 
 
