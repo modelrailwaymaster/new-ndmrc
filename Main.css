@@ -93,9 +93,13 @@ input:focus{
     width: 90%;
     color: white;
     font-weight: bold;
-    font-size: var(--fontSizeLarge);
+    font-size: var(--fontSizeMedium);
     top: 0;
     background-color: transparent;
+}
+
+.head_room{
+    height: 120px;
 }
 
 @media (max-width : 1000px)
@@ -187,7 +191,7 @@ input:focus{
     width: fit-content;
     display: none;
     position: absolute; 
-    top: 115px
+    top: 98px
 
 }
 
@@ -306,7 +310,7 @@ input:focus{
 
 /* privacy */
 .privacyContainer{
-    margin-top: 150px !important;
+    margin-top: 10px !important;
     padding: 10px;
     margin: 10px;
     border: 2px solid var(--Marron);
@@ -317,4 +321,54 @@ input:focus{
 .video-container iframe {
   width: 100%;
   height: auto;
+}
+
+/* bullet point center */
+li{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* exhibitions */
+
+.exhibitions{
+    margin: 10px;
+    background-color: var(--LightGrey);
+    border: 2px solid var(--Marron);
+    border-radius: 10px;
+}
+
+.exhibition_title{
+    font-size: var(--fontSizeMedium);
+    text-decoration: underline;
+}
+
+.exhibition_grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.exhibition{
+    width: fit-content;
+    padding: 10px;
+}
+
+.exhibition > b > ul{
+    width: fit-content;
+}
+
+
+@media (max-width: 1000px) {
+    .exhibition_grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto !important;
+    }
+}
+
+
+.exhibition_grid > * {
+    padding: 10px;
 }
