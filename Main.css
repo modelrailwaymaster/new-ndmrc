@@ -2,7 +2,7 @@
 :root{
     --Marron: #6a1800;
     --Grey: #232323;
-    --LightGrey: #B3B3B3;
+    --LightGrey: rgb(179, 179, 179);
     --Yellow: #ddaf4d;
     --fontSizeLarge: 40px;
     --fontSizeMedium: 30px;

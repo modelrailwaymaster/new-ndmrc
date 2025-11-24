@@ -47,6 +47,16 @@
     font-size: var(--fontSizeSmall);
 }
 
+.our_history{
+    white-space: pre-line;
+}
+
+.read_more{
+    padding: 10px;
+    color: var(--Marron) !important;
+    font-size: var(--fontSizeSmall);
+}
+
 .about_date_location{
     padding-bottom: 10px;
 }
@@ -131,11 +141,37 @@
 
 }
 
+/* contact & upcoming */
+
+.exhibition_contact{
+    display: grid;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns:  50% 50%;
+}
+
+.exhibition_override{
+    grid-template-columns:  50% 50%;
+}
+
+@media (max-width: 1200px){
+    .exhibition_override{
+    grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px){
+    .exhibition_contact{
+        grid-template-columns: 1fr;
+    }
+}
+
 /* contact */
 
 .contact{
     margin: 10px;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     padding: 10px;
     border: 2px solid var(--Marron);
     border-radius: 10px;
@@ -147,58 +183,16 @@
     text-decoration: underline;
 }
 
-.contact_input {
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: var(--LightGrey);
-    font-size: var(--fontSizeSmall);
-    line-height: inherit;
+.contact_container > iframe{
+    height: 450px !important;
+    box-shadow: none !important ;
 }
 
-.contact_input_fname{
-    width:250px;
-    margin-top: 10px;
-    margin-right: 10px;
+.contact_title{
+    font-size: var(--fontSizeMedium);
+    text-decoration: underline;
 }
 
-.contact_input_sname{
-    width:250px;
-    margin-top: 10px;
-}
-
-.contact_input_email{
-    width:512px;
-    margin-top: 10px;
-}
-
-@media (max-width: 550px) {
-    .contact_input_fname { width:48%;}
-    .contact_input_sname { width:48%;}
-    .contact_input_email { width:100%;}}
-
-.contact_input_message{
-    width: 100%;
-    height: 200px;
-
-}
-
-::placeholder {
-    color: black;
-    padding-left: 2px;
-}
-
-.contact_button{
-    margin-top: 10px;
-    width: 250px;
-    height: 75px;
-    font-size: var(--fontSizeLarge);
-    color: white;
-    background-color: var(--Marron);
-    border: 3px solid var(--Marron);
-    border-radius: 10px;
-}
-
-.contact_button:hover{
-    border-color: var(--Yellow);
-    color: var(--Yellow) !important;
+.contact_container{
+    max-width: 616px;
 }
