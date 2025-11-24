@@ -102,6 +102,14 @@ input:focus{
     height: 120px;
 }
 
+@media (max-width : 500px ){
+    .head_room{height: 97.5px !important;}
+}
+
+@media (max-width : 800px){
+    .head_room{height: 105px;}
+}
+
 @media (max-width : 1000px)
 {
     .name{font-size:var(--fontSizeMedium) !important;}
