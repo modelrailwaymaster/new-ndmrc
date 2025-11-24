@@ -47,6 +47,16 @@
     font-size: var(--fontSizeSmall);
 }
 
+.our_history{
+    white-space: pre-line;
+}
+
+.read_more{
+    padding: 10px;
+    color: var(--Marron) !important;
+    font-size: var(--fontSizeSmall);
+}
+
 .about_date_location{
     padding-bottom: 10px;
 }
@@ -201,4 +211,19 @@
 .contact_button:hover{
     border-color: var(--Yellow);
     color: var(--Yellow) !important;
+}
+
+.contact_container > iframe{
+    height: 450px !important;
+    box-shadow: none !important;
+}
+
+.contact_title{
+    font-size: var(--fontSizeMedium);
+    text-decoration: underline;
+}
+
+.contact_container{
+    width: 60%;
+    max-width: 616px;
 }
