@@ -56,7 +56,19 @@ body{
 }
 
 .tall{
-    height: 620px;
+    height: 605px;
+}
+
+@media (max-width: 364px){
+    .tall{
+        height: 618px !important;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 365px){
+    .tall{
+        height: 596px !important;
+    }
 }
 
 a{
@@ -74,6 +86,9 @@ input:focus{
     border: 2px solid var(--Yellow);
 }
 
+.hide{
+    display: none !important;
+}
 
 /* head */
 
@@ -120,7 +135,7 @@ input:focus{
     .name{font-size:var(--fontSizeSmall) !important;}
 }
 
-.button_container_large{
+.navbar_large{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,14 +147,10 @@ input:focus{
     background-color: transparent;
 }
 
-.button_container_small{
+.navbar_small{
     display: none;
     height: 75px;
-}
-
-.button_container > *{
-    text-align: center;
-    color: white;
+    grid-template-columns: 75px auto;
 }
 
 .button{
@@ -158,22 +169,31 @@ input:focus{
 }
 
 @media (max-width: 800px) {
-    .button_container_large {
+    .navbar_large {
       display: none !important;
     }
-    .button_container_small{
-        display: block !important;
+    .navbar_small{
+        display: grid !important;
     }
   }
 
 .dropdown_arrow{
     height: 25px;
-    padding-left: 3px;
-    padding-bottom: 1px;
+}
+
+.dropdown_arrow_small{
+    height: 30px;
+    width: 30px;
 }
 
 .logo_header{
-    height: 90%;
+    height: 100%;
+}
+
+.logo_link{
+    width: fit-content;
+    height: fit-content;
+    display: block;
 }
 
 .logo{
@@ -186,8 +206,8 @@ input:focus{
 .menu_button{
     width: 30px;
     height: 30px;
-    margin: 20px;
-    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .dropdown_layouts{
@@ -195,34 +215,12 @@ input:focus{
     border-radius: 10px;
     padding: 10px;
     padding-top: 10px!important;
-    transform: translateX(calc(-50% - 255px));
     width: fit-content;
-    display: none;
-    position: absolute; 
-    top: 98px
-
-}
-
-@media (max-width : 1175px) and (min-width:1000px)
-{
-    .dropdown_layouts{
-        transform: none !important;
-        left: 15%;
-    }
-    
-}
-
-@media (max-width : 1000px)
-{
-    .dropdown_layouts{
-        transform: none !important;
-        left: 12%;
-    }
-    
-}
-
-.dropdown_layouts:hover{
     display: block;
+    position: absolute; 
+    top: 98px;
+    left: 0px;
+    visibility: hidden;
 }
 
 .layout_button{
@@ -242,7 +240,6 @@ input:focus{
 }
 
 .dropdown_menu{
-    display: none;
     width: 100%;
     background-color: var(--Marron);
     height: 250px;
@@ -272,9 +269,8 @@ input:focus{
 }
 
 .logo_small{
-    object-fit: cover;
-    height: 100%;
-    margin-left: 35% !important;
+    height: 60px;
+    width: 150px;
 }
 
 .logo_small:hover{
@@ -285,7 +281,6 @@ input:focus{
 .dropdown_layouts_small{
     margin-left: 50px;
     margin-right: 50px;
-    display: none;
 }
 
 

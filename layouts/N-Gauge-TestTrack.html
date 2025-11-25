@@ -19,11 +19,14 @@
 </head>
 
 <body>
-    <div class="head" id="head">
-        <div class="center name" id="name">Northampton and District Model Railway Club</div>
-        <div class="button_container_large">
+    <div id="head" class="head">
+
+        <div id="name" class="center name">Northampton and District Model Railway Club</div>
+
+        <!-- large head-->
+        <div class="navbar_large">
             <a class="button center" href="../index.html">Home</a>
-            <a class="button center" href="../index.html#layouts" id="layouts_menu">Layouts<img src="../icons/dropdown.svg"
+            <a class="button center" id="layouts_menu">Layouts<img src="../icons/dropdown.svg"
                     class="dropdown_arrow"></a>
             <a class="button center" href="../Exhibitions.html">Exhibitions</a>
             <div class="logo_header"><a href="../index.html" class="home_image"><img src="../media/logo.png" class="logo"></a></div>
@@ -34,59 +37,13 @@
             <div class="dropdown_layouts" id="dropdown_layouts">
                 <a class="layout_button center" href="Kingsthorpe.html">Kingsthorpe</a>
                 <a class="layout_button center" href="Castle.html">Northampton Castle</a>
-                <a class="layout_button center" href="Demonstration.html">Demonstration</a>
+                <a class="layout_button center" href="  Demonstration.html">Demonstration</a>
                 <a class="layout_button center" href="RAYBILL.html">RAYBILL Junction</a>
                 <a class="layout_button center" href="Rheilffordd Nant‐Y‐Clag.html">Rheilffordd Nant‐Y‐Clag</a>
                 <a class="layout_button center" href="N-Gauge-TestTrack.html">N Gauge Test Track</a>
                 <a class="layout_button center" href="OO-Gauge-TestTrack.html">OO Gauge Test Track</a>
             </div>
-
-
         </div>
-        <div class="button_container_small">
-            <div class="menu_button"><img src="../icons/dropdown.svg" class="logo_small center"
-                    onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.remove('tall');">
-            </div>
-            <div class="logo_header"><img src="../media/logo.png" class="logo_small center"></div>
-        </div>
-
-        <div class="dropdown_menu" id="dropdown">
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="../index.html">Home</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown_layouts_small').classList.toggle('show'); document.getElementById('head').classList.toggle('tall');"
-                href="../index.html#layouts">Layouts<img src="../icons/dropdown.svg" class="dropdown_arrow"></a>
-
-
-            <div class="dropdown_layouts_small" id="dropdown_layouts_small">
-                <a class="layout_button_small" href="Kingsthorpe.html">Kingsthorpe</a>
-                <a class="layout_button_small" href="Castle.html">Northampton Castle</a>
-                <a class="layout_button_small" href="Demonstration.html">Demonstration</a>
-                <a class="layout_button_small" href="RAYBILL.html">RAYBILL Junction</a>
-                <a class="layout_button_small" href="Rheilffordd Nant‐Y‐Clag.html">Rheilffordd Nant‐Y‐Clag</a>
-                <a class="layout_button_small" href="N-Gauge-TestTrack.html">N Gauge Test Track</a>
-                <a class="layout_button_small" href="OO-Gauge-TestTrack.html">OO Gauge Test Track</a>
-            </div>
-
-            <a class="small_button " onclick="document.getElementById('dropdown').classList.toggle('show')"
-                href="../Exhibitions.html">Exhibitions</a>
-            <a class="small_button " onclick="document.getElementById('dropdown').classList.toggle('show')"
-                href="../Newsletters.html">Newsletters</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="../index.html#exhibition_contact">Contact</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="../History.html">History</a>
-        </div>
-    </div>
-
-    <div class="head_room"></div>
-
-    <div class="layout_title center">
-        <b>N Gauge Test Track:</b>
-    </div>
 
     <div class="carousel_container center">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -146,8 +103,8 @@
         <a href="https://x.com/NorthamptonDMRC" target="_blank">Twitter <img src="../icons/twitter.svg"></a>
     </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="../Main.js"></script>
 </body>
 
 </html>

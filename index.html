@@ -9,17 +9,21 @@
     <link rel="icon" type="image/x-icon" href="media/logo.png">
 
     <link rel="stylesheet" href="Main.css">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="head" id="head">
-        <div class="center name" id="name">Northampton and District Model Railway Club</div>
-        <div class="button_container_large">
+    <div id="head" class="head">
+
+        <div id="name" class="center name">Northampton and District Model Railway Club</div>
+
+        <!-- large head-->
+        <div class="navbar_large">
             <a class="button center" href="index.html">Home</a>
             <a class="button center" href="index.html#layouts" id="layouts_menu">Layouts<img src="icons/dropdown.svg"
                     class="dropdown_arrow"></a>
@@ -38,26 +42,23 @@
                 <a class="layout_button center" href="layouts/N-Gauge-TestTrack.html">N Gauge Test Track</a>
                 <a class="layout_button center" href="layouts/OO-Gauge-TestTrack.html">OO Gauge Test Track</a>
             </div>
-
-
         </div>
-        <div class="button_container_small">
-            <div class="menu_button"><img src="icons/dropdown.svg" class="logo_small center"
-                    onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.remove('tall');">
+
+        <!--small head-->
+        <div class="navbar_small">
+            <div id="menu_button" class="menu_button center"><img src="icons/dropdown.svg" class="dropdown_arrow_small center"></div>
+            <div class="logo_header">
+                <a id="logo_link" class="logo_link" href="index.html">
+                    <img src="media/logo.png" id="logo_small" class="logo_small center">
+                </a>
             </div>
-            <div class="logo_header"><img src="media/logo.png" class="logo_small center"></div>
         </div>
 
-        <div class="dropdown_menu" id="dropdown">
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="index.html">Home</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown_layouts_small').classList.toggle('show'); document.getElementById('head').classList.toggle('tall');"
-                href="index.html#layouts">Layouts<img src="icons/dropdown.svg" class="dropdown_arrow"></a>
+        <div id="dropdown" class="dropdown_menu hide">
+            <a class="small_button" href="index.html">Home</a>
+            <a id="nav_layouts" class="small_button" href="index.html#layouts">Layouts<img src="icons/dropdown.svg" class="dropdown_arrow"></a>
 
-
-            <div class="dropdown_layouts_small" id="dropdown_layouts_small">
+            <div id="dropdown_layouts_small" class="dropdown_layouts_small hide">
                 <a class="layout_button_small" href="layouts/Kingsthorpe.html">Kingsthorpe</a>
                 <a class="layout_button_small" href="layouts/Castle.html">Northampton Castle</a>
                 <a class="layout_button_small" href="layouts/Demonstration.html">Demonstration</a>
@@ -67,20 +68,23 @@
                 <a class="layout_button_small" href="layouts/OO-Gauge-TestTrack.html">OO Gauge Test Track</a>
             </div>
 
-            <a class="small_button " onclick="document.getElementById('dropdown').classList.toggle('show')"
-                href="Exhibitions.html">Exhibitions</a>
-            <a class="small_button " onclick="document.getElementById('dropdown').classList.toggle('show')"
-                href="Newsletters.html">Newsletters</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="index.html#exhibition_contact">Contact</a>
-            <a class="small_button "
-                onclick="document.getElementById('dropdown').classList.toggle('show');document.getElementById('head').classList.toggle('tall');"
-                href="History.html">History</a>
+            <a class="small_button" href="Exhibitions.html">Exhibitions</a>
+            <a class="small_button" href="Newsletters.html">Newsletters</a>
+            <a id="nav_contact" class="small_button" href="index.html#exhibition_contact">Contact</a>
+            <a class="small_button" href="History.html">History</a>
         </div>
     </div>
 
     <div class="head_room"></div>
+
+    <div id="notification" class="notification hide">
+        <div class="notification_text center">
+            test
+        </div>
+        <div class="close center">
+            <i id="close_cross" class="fa-solid fa-xmark close_cross"></i>
+        </div>
+    </div>
 
     <div class="about" id="about">
         <div class="about_box">
@@ -104,7 +108,7 @@
             </div>
             <div class="join_title">Join Us:</div>
             <div class="join_text">
-                Feel free to come see us at any of our meetings or <a class="join_contact" href="mailto:northamptonanddistrictmrc@gmail.com">
+                Feel free to come see us at any of our meetings or <a class="join_contact" href="index.html#exhibition_contact">
                     contact us</a><br><br>
                 Adult membership: £72 per year<br>
                 Junior membership: £12 per year<br>
@@ -147,10 +151,11 @@
             <div class="layout_text center">
                 <img src="media/Castle/Castle Main.jpg">
                 <br><br>
-                The layout is a scale model of Northampton's Castle Station in the 1930s. It shows the area between
+                This portable layout from the origianl loft layout, lovingly created by Leslie Roy is a scale model
+                of Northampton's Castle Station in the 1930s. It shows the area between
                 Westbridge and Spencer Bridge and features buildings that were replaced in 1965. To mark its 50th
                 anniversary, the Northampton &amp District Model Railway Club has built a layout of the town's Victorian
-                Castle Station, which was lovingly recreated by local railway enthusiast, Leslie Roy.
+                Castle Station.
                 <br><br>
             </div>
             <div class="layout_keypoint center">
@@ -164,7 +169,7 @@
                 <br><br>
                 Our purpose-built Demonstration Layout includes four OO gauge and three O gauge tracks and is always a
                 hit at club nights and exhibitions. It allows for the easy testing of any stock or controllers and
-                you see a larger verity of trains running.
+                you see a larger variety of trains running.
                 <br><br>
             </div>
             <div class="layout_keypoint center">
@@ -176,7 +181,7 @@
             <div class="layout_text center">
                 <img src="media/Rheilffordd Nant‐Y‐Clag/Rheilffordd Nant‐Y‐Clag Main.jpg">
                 <br><br>
-                This layout has been build by some of the younger members of the club. The layout depicts a small move
+                This layout has been built by some of the younger members of the club. The layout depicts a small motive
                 power depot set roughly in North Wales. The
                 front main line is connected to the national network and the rear as a heritage railway.
                 <br><br>
@@ -245,6 +250,10 @@
         &nbsp;&nbsp;&nbsp;&nbsp;⬤&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://x.com/NorthamptonDMRC" target="_blank">Twitter <img src="icons/twitter.svg"></a>
     </div>
+
+
+    <script src="Main.js"></script>
+    <script src="Index.js"></script>
 </body>
 
 </html>
