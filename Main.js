@@ -53,6 +53,7 @@ nav_layouts.addEventListener("click", () => {
 window.onresize = function () {
     var pos = ((screen.width / 2) - (logo_small.offsetWidth / 2)) - 75;
     logo_link.style.marginLeft = pos +"px";
+    dropdown.classList.add("hide")
 };
 
 window.onload = function () {
